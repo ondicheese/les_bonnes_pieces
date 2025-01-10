@@ -82,33 +82,4 @@ export async function afficherGraphAvis()
 {
   const allAvis = await fetch("http://localhost:8081/avis");
   console.log(allAvis);
-  /*
-  .then(value=>value.json());
-
-  const nbEtoilesArray = [0,0,0,0,0];
-
-  for(let avis of allAvis)
-  {
-    if(Number.isInteger(avis.nbEtoiles)) console.log(avis.nbEtoiles);
-    nbEtoilesArray[avis.nbEtoiles-1]++;
-  }
-  
-  const canvasElt = document.getElementById("graphique-avis");
-
-  new Chart(canvasElt, 
-    {
-      type: 'bar',
-      data: {
-        labels: ["5 étoiles", "4 étoiles", "3 étoiles", "2 étoiles", "1 étoile"],
-        datasets: [{
-          label: "Etoiles attribuées",
-          data: nbEtoilesArray.reverse(),
-          borderWidth: 1,
-          backgroundColor: 'rgb(255, 230, 0)'
-        }]
-      },
-      options: {
-        indexAxis: 'y'
-      }
-    });*/
 }
